@@ -30,9 +30,17 @@
   text-decoration: none;
   color: inherit;
   text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.activeUsersLink {
+.usersAge {
+  text-transform: lowercase;
+  color: grey;
+}
+
+.selectedUsersLink {
   color: blue;
   border: 1px solid purple;
   border-radius: 15px;
