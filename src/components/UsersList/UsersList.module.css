@@ -1,0 +1,40 @@
+.usersList {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.usersItemList {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.userPhoto {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid pink;
+}
+
+.usersWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+.usersLink {
+  text-decoration: none;
+  color: inherit;
+  text-transform: capitalize;
+}
+
+.activeUsersLink {
+  color: blue;
+  border: 1px solid purple;
+  border-radius: 15px;
+  background-color: aqua;
+}
