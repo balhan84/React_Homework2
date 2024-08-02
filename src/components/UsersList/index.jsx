@@ -62,10 +62,10 @@ const userList = [
 ];
 
 function UsersList() {
-  const { usersList, setUsersList } = useState(userList);
+  const [usersList, setUsersList] = useState(userList);
 
   const mapUsersList = (u) => {
-    return <UserListItem key={u.id} usersList={u} />;
+    return <UserListItem key={u.id} userList={u} />;
   };
 
   return <ul className={styles.usersList}>{usersList.map(mapUsersList)}</ul>;
