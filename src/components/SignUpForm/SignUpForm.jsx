@@ -41,19 +41,27 @@ function SignUpForm() {
     });
   };
 
+  const isSignUpBtnDisabled = () => {
+    return !(
+      SignUpFormRegExp.fullName.test(fullName) &&
+      SignUpFormRegExp.email.test(email) &&
+      SignUpFormRegExp.password.test(password)
+    );
+  };
+
   //   const inputFullNameClassName = classNames(styles.formInput, {
   //     [styles.validInput]: SignUpFormRegExp.fullName.test(fullName),
   //     [styles.invalidInput]: !SignUpFormRegExp.fullName.test(fullName),
   //   });
 
   //   const inputEmailClassName = classNames(styles.formInput, {
-  //     [styles.validInput]: SignUpFormRegExp.fullName.test(email),
-  //     [styles.invalidInput]: !SignUpFormRegExp.fullName.test(email),
+  //     [styles.validInput]: SignUpFormRegExp.email.test(email),
+  //     [styles.invalidInput]: !SignUpFormRegExp.email.test(email),
   //   });
 
   //   const inputPasswordClassName = classNames(styles.formInput, {
-  //     [styles.validInput]: SignUpFormRegExp.fullName.test(password),
-  //     [styles.invalidInput]: !SignUpFormRegExp.fullName.test(password),
+  //     [styles.validInput]: SignUpFormRegExp.password.test(password),
+  //     [styles.invalidInput]: !SignUpFormRegExp.password.test(password),
   //   });
 
   return (
@@ -95,7 +103,13 @@ function SignUpForm() {
           />
         </label>
 
-        <button className={styles.signUpBtn}>Sign Up</button>
+        <button
+          className={styles.signUpBtn}
+          disabled={isSignUpBtnDisabled()}
+          type="submit"
+        >
+          Sign Up
+        </button>
       </form>
     </div>
   );
